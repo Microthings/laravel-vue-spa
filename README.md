@@ -18,7 +18,7 @@
 - Login, register, email verification and password reset
 - Authentication with JWT
 - Socialite integration
-- Bootstrap 4 + Font Awesome 5
+- Tabler + Tabler Icons
 
 ## 
 
