@@ -1,6 +1,13 @@
 @import 'variables';
+<<<<<<< HEAD
 @import "~@tabler/core";
 @import '~sweetalert2/src/sweetalert2';
+=======
+
+@import '~bootstrap/scss/bootstrap';
+@import '~sweetalert2/dist/sweetalert2';
+@import '~@fortawesome/fontawesome-svg-core/styles';
+>>>>>>> d395d99142325298e36cf0515bb6e469062c9c04
 
 @import 'elements/card';
 @import 'elements/navbar';

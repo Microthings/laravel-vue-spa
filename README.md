@@ -18,12 +18,16 @@
 - Login, register, email verification and password reset
 - Authentication with JWT
 - Socialite integration
+<<<<<<< HEAD
 - Tabler + Tabler Icons
 
 ## 
 
 [![questionnaire](https://i.imgur.com/8UtUnH2.png)](https://forms.gle/rb2oh24WhNzWiEveA)
 
+=======
+- Bootstrap 5 + Font Awesome 5
+>>>>>>> d395d99142325298e36cf0515bb6e469062c9c04
 
 ## Installation
 
@@ -38,17 +42,13 @@
 #### Development
 
 ```bash
-# Build and watch
-npm run watch
-
-# Serve with hot reloading (not working)
-npm run hot
+npm run dev
 ```
 
 #### Production
 
 ```bash
-npm run production
+npm run build
 ```
 
 ## Socialite

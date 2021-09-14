@@ -1,5 +1,15 @@
 # Changelog
 
+## 6.0.1 - 2021-08-15
+
+- Added `asyncData` method to components (example in `pages/home.vue`).
+
+## 6.0.0 - 2021-08-14
+
+- Upgrade to Bootstrap 5
+- Upgrade to Mix 6
+- Update dependencies
+
 ## 5.0.3 - 2021-05-13
 
 - Added modal with server error.
