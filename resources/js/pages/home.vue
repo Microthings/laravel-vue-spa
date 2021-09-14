@@ -1,9 +1,11 @@
 <template>
-  <div class="row">
-    <div class="col-lg-10 m-auto">
-      <card :title="$t('home')">
-        {{ $t('you_are_logged_in') }}
-      </card>
+  <div class="page-wrapper">
+    <div class="page-body">
+      <div class="container-xl">
+        <card :title="$t('home')">
+          {{ $t('you_are_logged_in') }}
+        </card>
+      </div>
     </div>
   </div>
 </template>
