@@ -7,12 +7,10 @@
     "eslint": "eslint --fix --ext .js,.vue resources/js"
   },
   "dependencies": {
-<<<<<<< HEAD
     "axios": "^0.21.1",
     "@tabler/core": "^1.0.0-beta2",
     "@tabler/icons": "^1.41.2",
     "jquery": "^3.5.1",
-=======
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-regular-svg-icons": "^5.15.4",
@@ -21,7 +19,6 @@
     "@popperjs/core": "^2.9.3",
     "axios": "^0.21.1",
     "bootstrap": "^5.1.0",
->>>>>>> d395d99142325298e36cf0515bb6e469062c9c04
     "js-cookie": "^2.2.1",
     "sweetalert2": "^11.1.2",
     "vform": "^2.1.1",
