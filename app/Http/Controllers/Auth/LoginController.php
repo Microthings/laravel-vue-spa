@@ -21,6 +21,25 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    public function username()
+    {
+        return 'username';
+    }
+
+    protected function validateLogin(Request $request)
+    {
+        $messages = [
+            'username.required' => 'Username tidak boleh kosong',
+            'username.exists' => 'Username tidak terdaftar',
+            'password.required' => 'Password tidak boleh kosong',
+        ];
+
+        $request->validate([
+            'username' => 'required|string|exists:users',
+            'password' => 'required|string',
+        ], $messages);
+    }
+
     /**
      * Attempt to log the user into the application.
      */

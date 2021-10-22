@@ -1,12 +1,6 @@
-@import 'variables';
-
-@import '~bootstrap/scss/bootstrap';
+@import "~@tabler/core";
 @import '~sweetalert2/dist/sweetalert2';
-@import '~@fortawesome/fontawesome-svg-core/styles';
-
-@import 'elements/card';
-@import 'elements/navbar';
-@import 'elements/buttons';
 @import 'elements/transitions';
+@import '~vue-toastification/dist/index.css';
 
-@import 'components/server-error';
+@import "components/server-error";

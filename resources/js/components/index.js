@@ -3,6 +3,7 @@ import Card from './Card.vue'
 import Child from './Child.vue'
 import Button from './Button.vue'
 import Checkbox from './Checkbox.vue'
+import PageTitle from './template/PageTitle'
 import { HasError, AlertError, AlertSuccess } from 'vform/components/bootstrap5'
 
 // Components that are registered globaly.
@@ -11,6 +12,7 @@ import { HasError, AlertError, AlertSuccess } from 'vform/components/bootstrap5'
   Child,
   Button,
   Checkbox,
+  PageTitle,
   HasError,
   AlertError,
   AlertSuccess

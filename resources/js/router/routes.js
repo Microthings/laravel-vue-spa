@@ -3,8 +3,13 @@ function page (path) {
 }
 
 export default [
-  { path: '/', name: 'welcome', component: page('welcome.vue') },
+  // Root
+  { path: '/', redirect: { name: 'home' } },
 
+  // Home
+  { path: '/home', name: 'home', component: page('home.vue') },
+
+  // Auth
   { path: '/login', name: 'login', component: page('auth/login.vue') },
   { path: '/register', name: 'register', component: page('auth/register.vue') },
   { path: '/password/reset', name: 'password.request', component: page('auth/password/email.vue') },
@@ -12,7 +17,10 @@ export default [
   { path: '/email/verify/:id', name: 'verification.verify', component: page('auth/verification/verify.vue') },
   { path: '/email/resend', name: 'verification.resend', component: page('auth/verification/resend.vue') },
 
-  { path: '/home', name: 'home', component: page('home.vue') },
+  // User
+  { path: '/users', name: 'users', component: page('user/user.vue') },
+
+  // Settings
   {
     path: '/settings',
     component: page('settings/index.vue'),
@@ -23,5 +31,9 @@ export default [
     ]
   },
 
+  // Example
+  { path: '/example', name: 'example', component: page('example.vue') },
+
+  // 404 Not Found
   { path: '*', component: page('errors/404.vue') }
 ]

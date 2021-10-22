@@ -1,53 +1,41 @@
 <template>
-  <div class="row">
-    <div class="col-lg-7 m-auto">
-      <card :title="$t('login')">
-        <form @submit.prevent="login" @keydown="form.onKeydown($event)">
-          <!-- Email -->
-          <div class="mb-3 row">
-            <label class="col-md-3 col-form-label text-md-end">{{ $t('email') }}</label>
-            <div class="col-md-7">
-              <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email">
-              <has-error :form="form" field="email" />
-            </div>
+  <div class="page page-center">
+    <div class="container-tight py-4">
+      <div class="text-center mb-4">
+        <a href="."><img :src="imgBanner" height="250" alt=""></a>
+        <h1 class="text-center mb-4">
+        <!-- {{ appName } }-->
+        </h1>
+      </div>
+      <form class="card card-md" autocomplete="off" @submit.prevent="login" @keydown="form.onKeydown($event)">
+        <div class="card-body">
+          <div class="mb-3">
+            <label class="form-label">Username</label>
+            <input v-model="form.username" :class="{ 'is-invalid': form.errors.has('username') }" name="username" type="text" class="form-control" placeholder="Username">
+            <has-error :form="form" field="username" />
           </div>
-
-          <!-- Password -->
-          <div class="mb-3 row">
-            <label class="col-md-3 col-form-label text-md-end">{{ $t('password') }}</label>
-            <div class="col-md-7">
-              <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control" type="password" name="password">
+          <div class="mb-2">
+            <label class="form-label">
+              Password
+            </label>
+            <div class="input-group input-group-flat">
+              <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" name="password" type="password" class="form-control" placeholder="Password" autocomplete="off">
               <has-error :form="form" field="password" />
             </div>
+            <span class="form-label-description mt-1">
+              <!--              <a href="#">Lupa password?</a>-->
+            </span>
           </div>
-
-          <!-- Remember Me -->
-          <div class="mb-3 row">
-            <div class="col-md-3" />
-            <div class="col-md-7 d-flex">
-              <checkbox v-model="remember" name="remember">
-                {{ $t('remember_me') }}
-              </checkbox>
-
-              <router-link :to="{ name: 'password.request' }" class="small ms-auto my-auto">
-                {{ $t('forgot_password') }}
-              </router-link>
-            </div>
+          <div class="form-footer">
+            <v-button :loading="form.busy" class="btn btn-primary w-100">
+              Login
+            </v-button>
           </div>
-
-          <div class="mb-3 row">
-            <div class="col-md-7 offset-md-3 d-flex">
-              <!-- Submit Button -->
-              <v-button :loading="form.busy">
-                {{ $t('login') }}
-              </v-button>
-
-              <!-- GitHub Login Button -->
-              <login-with-github />
-            </div>
-          </div>
-        </form>
-      </card>
+        </div>
+      </form>
+      <!--      <div class="text-center text-muted mt-3">-->
+      <!--        Belum punya akun? <a href="./register" tabindex="-1">Registrasi</a>-->
+      <!--      </div>-->
     </div>
   </div>
 </template>
@@ -55,12 +43,13 @@
 <script>
 import Form from 'vform'
 import Cookies from 'js-cookie'
-import LoginWithGithub from '~/components/LoginWithGithub'
+const bannerPath = '/images/app-logo.jpg'
 
 export default {
   components: {
-    LoginWithGithub
   },
+
+  layout: 'empty',
 
   middleware: 'guest',
 
@@ -70,10 +59,11 @@ export default {
 
   data: () => ({
     form: new Form({
-      email: '',
+      username: '',
       password: ''
     }),
-    remember: false
+    remember: false,
+    imgBanner: bannerPath
   }),
 
   methods: {
