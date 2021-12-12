@@ -10,6 +10,7 @@ Thanks to [Laravel-Vue SPA](https://github.com/cretueusebiu/laravel-vue-spa), [T
 - Update `.env` configuration
 - Run `php artisan key:generate` and `php artisan jwt:secret`
 - `php artisan migrate`
+- `php artisan db:seed --class=UserSeeder`
 - `npm install`
 
 ## Usage
